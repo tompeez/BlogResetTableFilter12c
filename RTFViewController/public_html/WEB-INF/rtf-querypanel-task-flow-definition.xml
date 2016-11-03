@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="rtf-querypanel-task-flow-definition">
+    <default-activity>EmpQueryPanel</default-activity>
+    <managed-bean id="__1">
+      <managed-bean-name>FilterResetBean</managed-bean-name>
+      <managed-bean-class>de.hahn.blog.view.beans.ResetTableFilterBean</managed-bean-class>
+      <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <view id="EmpQueryPanel">
+      <page>/EmpQueryPanel.jsff</page>
+    </view>
+    <method-call id="resetTableFilter">
+      <method>#{FilterResetBean.setRestFlag}</method>
+      <outcome>
+        <fixed-outcome>show</fixed-outcome>
+      </outcome>
+    </method-call>
+    <view id="Otherpage">
+      <page>/Otherpage.jsff</page>
+    </view>
+    <control-flow-rule id="__2">
+      <from-activity-id>resetTableFilter</from-activity-id>
+      <control-flow-case id="__3">
+        <from-outcome>show</from-outcome>
+        <to-activity-id>EmpQueryPanel</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__4">
+      <from-activity-id>Otherpage</from-activity-id>
+      <control-flow-case id="__5">
+        <from-outcome>backwithoutclear</from-outcome>
+        <to-activity-id>EmpQueryPanel</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__6">
+        <from-outcome>backwithclear</from-outcome>
+        <to-activity-id>resetTableFilter</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__7">
+      <from-activity-id>EmpQueryPanel</from-activity-id>
+      <control-flow-case id="__8">
+        <from-outcome>nav</from-outcome>
+        <to-activity-id>Otherpage</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="RTFAppModule"
+  Version="11.1.2.60.81"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="EmployeesView1"
+    ViewObjectName="de.hahn.blog.model.dataaccess.EmployeesView"/>
+  <ViewUsage
+    Name="EmployeesView2"
+    ViewObjectName="de.hahn.blog.model.dataaccess.EmployeesView"/>
+  <ViewLinkUsage
+    Name="EmpManagerFkLink1"
+    ViewLinkObjectName="de.hahn.blog.model.dataaccess.EmpManagerFkLink"
+    SrcViewUsageName="de.hahn.blog.model.facade.RTFAppModule.EmployeesView1"
+    DstViewUsageName="de.hahn.blog.model.facade.RTFAppModule.EmployeesView2"
+    Reversed="false"/>
+</AppModule>

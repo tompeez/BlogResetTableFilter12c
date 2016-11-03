@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!---->
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="de.hahn.blog.model.facade.RTFAppModule">
+      <AppModuleConfig DeployPlatform="LOCAL" jbo.project="de.hahn.blog.model.RTFModel" name="RTFAppModuleLocal"
+                       ApplicationName="de.hahn.blog.model.facade.RTFAppModule">
+         <Database jbo.TypeMapEntries="OracleApps" jbo.locking.mode="optimistic" JDBCDataSource="jdbc/HRConnDS"/>
+         <Security AppModuleJndiName="de.hahn.blog.model.facade.RTFAppModule"/>
+         <Custom JDBCDataSource="jdbc/HRConnDS"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="RTFAppModuleShared" jbo.project="de.hahn.blog.model.RTFModel" ApplicationName="de.hahn.blog.model.facade.RTFAppModule"
+                       DeployPlatform="LOCAL">
+         <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+         <Database jbo.TypeMapEntries="OracleApps" JDBCDataSource="java:comp/env/jdbc/HrConnDS"/>
+         <Security AppModuleJndiName="de.hahn.blog.model.facade.RTFAppModule"/>
+         <Custom JDBCDataSource="java:comp/env/jdbc/HRConnDS"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

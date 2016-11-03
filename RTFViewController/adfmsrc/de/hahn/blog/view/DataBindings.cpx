@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="11.1.2.60.81"
+             id="DataBindings" SeparateXMLFiles="false" Package="de.hahn.blog.view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/Emp.jsff" usageId="de_hahn_blog_view_EmpPageDef"/>
+    <page path="/RTFTest.jsf" usageId="de_hahn_blog_view_RTFTestPageDef"/>
+    <page path="/EmpQueryPanel.jsff" usageId="de_hahn_blog_view_EmpQueryPanelPageDef"/>
+    <page path="/RTFQPTest.jsf" usageId="de_hahn_blog_view_RTFQPTestPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="de_hahn_blog_view_EmpPageDef" path="de.hahn.blog.view.pageDefs.EmpPageDef"/>
+    <page id="de_hahn_blog_view_RTFTestPageDef" path="de.hahn.blog.view.pageDefs.RTFTestPageDef"/>
+    <page id="de_hahn_blog_view_EmpQueryPanelPageDef"
+          path="de.hahn.blog.view.pageDefs.EmpQueryPanelPageDef"/>
+    <page id="de_hahn_blog_view_RTFQPTestPageDef"
+          path="de.hahn.blog.view.pageDefs.RTFQPTestPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="RTFAppModuleDataControl" Package="de.hahn.blog.model.facade"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl"
+                     SupportsTransactions="true" SupportsFindMode="true" SupportsRangesize="true"
+                     SupportsResetState="true" SupportsSortCollection="true"
+                     Configuration="RTFAppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="RTFTest">
+    <page>/RTFTest.jsf</page>
+  </view>
+  <view id="RTFQPTest">
+    <page>/RTFQPTest.jsf</page>
+  </view>
+  <managed-bean id="__1">
+    <managed-bean-name>ResetTableFilterBean</managed-bean-name>
+    <managed-bean-class>de.hahn.blog.view.beans.ResetTableFilterBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+</adfc-config>
