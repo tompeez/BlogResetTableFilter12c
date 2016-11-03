@@ -53,11 +53,11 @@
       <property
          name="pageFragment">true</property>
       <property
-         name="x">646.0</property>
+         name="x">667.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>Otherpage&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">249.07812</property>
+         name="y">293.10938</property>
       <property
          name="page">/Otherpage.jsff</property>
       <property
@@ -71,7 +71,7 @@
       <property
          name="fromOutcome">backwithoutclear</property>
       <property
-         name="sdm:polyPoints">L50,605.0,249.09375,410.0,176.10449,R50</property>
+         name="sdm:polyPoints">L42,626.0,286.125,411.72745,172.60449,R46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -81,7 +81,7 @@
       <property
          name="fromOutcome">backwithclear</property>
       <property
-         name="sdm:polyPoints">L54,605.0,252.59375,217.0,305.17188,R50</property>
+         name="sdm:polyPoints">L58,626.0,300.125,217.0,305.17188,R50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -91,6 +91,6 @@
       <property
          name="fromOutcome">nav</property>
       <property
-         name="sdm:polyPoints">R46,L10</property>
+         name="sdm:polyPoints">R54,410.0,179.60449,624.2664,293.125,L50</property>
    </ControlFlowCase>
 </SDM>

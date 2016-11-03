@@ -18,7 +18,7 @@ import oracle.adf.view.rich.model.FilterableQueryDescriptor;
 public class ResetTableFilterBean {
     private static ADFLogger logger = ADFLogger.createADFLogger(ResetTableFilterBean.class);
     private RichTable empTable;
-    private String shortDescritopn;
+    private String shortDescription;
 
     public ResetTableFilterBean() {
     }
@@ -47,7 +47,6 @@ public class ResetTableFilterBean {
             if (!lc.isEmpty()){
                 logger.info("...iterating criterions...");
             }
-            logger.info("...iterating criterions...");
             for (Criterion c : lc) {
                 if (c instanceof AttributeCriterion) {
                     AttributeCriterion ac = (AttributeCriterion) c;
@@ -72,12 +71,12 @@ public class ResetTableFilterBean {
     }
 
 
-    public void setShortDescritopn(String shortDescritopn) {
+    public void setShortDescription(String shortDescritopn) {
         logger.info("Set ShortDescription called");
-        this.shortDescritopn = shortDescritopn;
+        this.shortDescription = shortDescritopn;
     }
 
-    public String getShortDescritopn() {
+    public String getShortDescription() {
         logger.info("get ShortDescription called");
         AdfFacesContext adfFacesCtx = AdfFacesContext.getCurrentInstance();
 
@@ -93,7 +92,7 @@ public class ResetTableFilterBean {
 
         }
 
-        return shortDescritopn;
+        return shortDescription;
     }
 
     public void setRestFlag() {

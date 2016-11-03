@@ -33,7 +33,7 @@
                                   selectionListener="#{bindings.EmployeesView1.collectionModel.makeCurrent}"
                                   rowSelection="single" id="resId1" styleClass="AFStretchWidth"
                                   binding="#{ResetTableFilterBean.empTable}"
-                                  columnStretching="multiple" shortDesc="#{ResetTableFilterBean.shortDescritopn}">
+                                  columnStretching="multiple" shortDesc="#{ResetTableFilterBean.shortDescription}">
                             <af:column sortProperty="#{bindings.EmployeesView1.hints.EmployeeId.name}"
                                        filterable="true" sortable="true"
                                        headerText="#{bindings.EmployeesView1.hints.EmployeeId.label}"
